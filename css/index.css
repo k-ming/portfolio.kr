@@ -20,7 +20,7 @@ html {
 body {
   width: 100%;
   height: 100vh;
-  background:url(../img/amalfi.jpg) no-repeat center fixed;
+  background:url(../img/bg1.JPG) no-repeat center fixed;
   background-size: cover;
   overflow-x:hidden;
 }
@@ -112,7 +112,7 @@ header {
 .lnb{ 
   width: 100%; height: 6rem; 
   line-height: 6rem;
-  background-color: #16162d;
+  /* background-color: #16162d; */
 }
 
 .language{
@@ -135,7 +135,7 @@ header {
 }
 
 .language li:hover,
-.language li:focus{color: #88d3ff;}
+.language li:focus{ text-decoration-line: underline;}
 
 
 
@@ -153,7 +153,6 @@ color: #fff;
   width: 8rem;
   height:3rem;
   line-height: 3rem;
-  border-radius: 0.5rem;
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   font-size: 2rem;
@@ -163,7 +162,8 @@ color: #fff;
 
 
 .menu>li:hover{
-  background: linear-gradient(to left, #0854e2, #88d3ff);
+  /* text-decoration: underline; */
+  border-bottom: 3px solid #fff;
 }
 
 
@@ -179,7 +179,7 @@ color: #fff;
   top: -100vh;
   -ms-top: 100vh;
   z-index: 50;
-  background-color: #0073b1;
+  background-color: #c6e4fd;
   transition: all 650ms cubic-bezier(1, 0, 0, 1);
 }
 
@@ -205,7 +205,7 @@ li {
 
 .nav-link:hover,
 .nav-link:focus {
-  background: linear-gradient(to top, #ffe838, #fd57bf);
+  background: linear-gradient(to bottom, #0854e2, #a9d8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
@@ -241,7 +241,7 @@ li {
 /* menu button bar---start */
 
 .bar {
-  background: linear-gradient(to right, #ffe838, #fd57bf);
+  background-color: #fff;
   width: 100%;
   height: 4px;
   border-radius: 0.8rem;
@@ -273,6 +273,37 @@ li {
 
 /* menu button bar---end */
 
+/* wing icons start */
+.wing_icons{
+  width: 5rem;
+  height: 10rem;
+  position: fixed;
+  top: 45%;
+  right: 4rem;
+  z-index: 10;
+  
+}
+
+.wing_icons li{
+  margin-top: 2rem;
+
+}
+.wing_icons li a i{
+  font-size: 3.5rem;
+  color: rgb(48, 48, 48);
+}
+
+    
+.fa-github:hover {
+  color: #000;
+}
+.fa-linkedin:hover {
+  color: #0073b1;
+}
+
+
+
+
 /* main */
 
 .landing-page {
@@ -280,6 +311,7 @@ li {
   padding-top: 15%;
   text-align: center;
   z-index: 1;
+  margin-bottom: 350px;
 }
 
 .landing-page div{
@@ -287,23 +319,44 @@ li {
   margin: 0 auto;
 }
 
-.landing-page div img{ 
-  width: 100%;
-  transform: scale(0.9);
-  transition:all 0.5s;
+.name{ font-size: 6rem;}
+.work_title{ font-size: 3.5rem; margin-top: 4rem;}
+
+
+
+/* main-scroll start */
+
+.scroll-down1 {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  font-size: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.scroll-down1 i {
+  color: #fff;
+  animation: scrollDown1 1.5s ease infinite;
 }
 
-.landing-page div img:hover{
- transform: scale(1.1);
-}
-
-
-.landing-page h6 {
-  font-family: 'MuseoModerno', cursive;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-top: 3rem;
-  color: #eee;
+@keyframes scrollDown1 {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
 }
 
 /* containers */
@@ -320,7 +373,7 @@ li {
   text-align: center;
   text-transform: uppercase;
   line-height: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
   font-family: 'MuseoModerno', cursive;
 }
 
@@ -350,37 +403,7 @@ li {
   font-size: 1.5rem;
 }
 
-.social-media {
-  margin-top: 5rem;
-}
 
-.social-media i {
-  font-size: 4.5rem;
-  color: rgb(209, 207, 207);
-  transition: color 650ms;
-}
-
-.nav-list {
-  list-style: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.nav-list li {
-  margin-right: 2rem;
-}
-
-    
-.fa-github:hover {
-  color: #000;
-}
-.fa-linkedin:hover {
-  color: #0073b1;
-}
 
 /* profile------end*/
 
@@ -416,7 +439,7 @@ li {
 }
 
 .icon-container i {
-  background: linear-gradient(to left, #0854e2, #88d3ff);
+  background: linear-gradient(to bottom, #0854e2, #a9d8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 5rem;
@@ -452,34 +475,35 @@ li {
 .skill_ability{ width: 100%; padding-left: 3rem;}
 .skill_ability .level_photoshop{
   width: 90%; height: 1.8rem;   
-  background: linear-gradient(to right, #0854e2,#f88ed1);
+  background: linear-gradient(to right, #0854e2,#a9d8ff);
   text-align: right; color: #eee; line-height: 1.8rem;
 
 }
 
 .skill_ability .level_illustrator{
   width: 80%; height: 1.8rem; 
-  background: linear-gradient(to right, #0854e2,#f88ed1);
+  background: linear-gradient(to right, #0854e2,#a9d8ff);
   text-align: right; color: #eee; line-height: 1.8rem;
 }
 
 .skill_ability .level_html{
   width: 95%; height: 1.8rem; 
-  background: linear-gradient(to right, #0854e2,#f88ed1);
+  background: linear-gradient(to right, #0854e2,#a9d8ff);
   text-align: right; color: #eee; line-height: 1.8rem;
 }
 
 .skill_ability .level_css{
   width: 95%; height: 1.8rem;
-  background: linear-gradient(to right, #0854e2,#f88ed1);
+  background: linear-gradient(to right, #0854e2,#a9d8ff);
   text-align: right; color: #eee; line-height: 1.8rem;
 }
 
 .skill_ability .level_jquery{
   width: 80%; height: 1.8rem; 
-  background: linear-gradient(to right, #0854e2,#f88ed1);
+  background: linear-gradient(to right, #0854e2,#a9d8ff);
   text-align: right; color: #eee; line-height: 1.8rem;
 }
+
 
 
 /* my skill------end*/
@@ -720,48 +744,28 @@ font-size: 1.5rem;
 
 .contact{ background-color: rgba(255,255,255,0.0);}
 .contact p{ 
-  font-size: 4rem; font-weight: 700;
+  font-size: 5rem; font-weight: 700;
   font-family: 'MuseoModerno', cursive;
   color: #16162d;
 }
 
-.min-icon{ 
-  width: 100%; 
-  text-align: center;
-  justify-content: center;
-  margin-top: 12rem;
-}
 
-.min-icon img{ width: 10%;}
-
-.contact ul{ list-style: none; }
+.contact ul{ list-style: none; margin-top: 50px; margin-bottom: 400px;}
 .contact ul li{ 
-  font-family: 'MuseoModerno', cursive;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 700;
   color: #16162d;
-  background-color:rgba(255,255,255, 0.6);
 }
 
-.handwave{ width: 100%; margin: 3rem 0 4rem 0; text-align: center;}
-.handwave img{ 
-  width: 5rem; 
-  transform:  rotate( 30deg);
-  animation: handwave 0.8s 0.1s infinite;}
-
-@keyframes handwave{
-  0%{ transform : rotate( 20deg)}
-  100%{ transform : rotate(-10deg)}
-
-}
 
 /* contact ----end*/
 /* footer ----start*/
 
 .copyright {
   width: 100%;
+  height: 5rem;
   text-align: center;
-  background-color: #16162d;
   padding: 2rem 0;
   position: relative;
 }
@@ -772,7 +776,7 @@ font-size: 1.5rem;
   height: 5rem;
   background-color: #eee;
   top: -2.5rem;
-  right: 5rem;
+  right: 3rem;
   border-radius: 100%;
   display: flex;
   animation: pulse 2s infinite;
@@ -787,7 +791,19 @@ font-size: 1.5rem;
 
 .copyright p {
   font-size: 1.4rem;
-  color: #eee;
+  color: #fff;
+}
+
+.copy{ 
+  position: absolute; 
+  top: 1.5rem;
+  left: 50%;
+}
+
+.photoby{
+  position: absolute;
+  top: 1.5rem;
+  right: 10%;
 }
 
 /* top button animation */
@@ -816,7 +832,7 @@ font-size: 1.5rem;
 body {
   width: 100%;
   height: 100vh;
-  background:url(../img/amalfi.jpg) no-repeat center fixed;
+  background:url(../img/bg1.JPG) no-repeat center fixed;
   background-size: cover;
   overflow-x:hidden;
 }
@@ -838,7 +854,7 @@ body {
 body {
   width: 100%;
   height: 100vh;
-  background:url(../img/amalfi.jpg) no-repeat center fixed;
+  background:url(../img/bg1.JPG) no-repeat center fixed;
   background-size: cover;
   overflow-x:hidden;
 }
@@ -867,14 +883,6 @@ body {
   font-size: 5.5rem;
 }
 
-
-.skill_ability{ width: 80%;}
-
-
-
-
-
-
 }
 
 /* 태블릿 가로--------------------------------------------------- */
@@ -882,7 +890,7 @@ body {
 body {
   width: 100%;
   height: 100vh;
-  background:url(../img/amalfi.jpg) no-repeat center fixed;
+  background:url(../img/bg1.JPG) no-repeat center fixed;
   background-size: cover;
   overflow-x:hidden;
 }
@@ -910,7 +918,6 @@ body {
   height: 3.5rem;
   text-align: center;
   border-radius: 1.2rem;
-  background-color: #0073b1;
   font-weight: 500;
   margin-right:0rem;
   margin-top:0.3rem;
@@ -1013,7 +1020,6 @@ body {
 .prev { left:2rem; text-align: left; }
 .next { right: 2rem; text-align: right; }
 
-.min-icon img{ width: 20%;}
 }
 
 
@@ -1022,7 +1028,7 @@ body {
 body {
   width: 100%;
   height: 100vh;
-  background:url(../img/amalfi.jpg) no-repeat center fixed;
+  background:url(../img/bg1.JPG) no-repeat center fixed;
   background-size: cover;
   overflow-x:hidden;
 }
@@ -1048,8 +1054,6 @@ body {
   width: 5rem;
   height: 3.5rem;
   text-align: center;
-  border-radius: 1.2rem;
-  background-color: #0073b1;
   font-weight: 500;
   margin-right:0rem;
   margin-top:0.3rem;
@@ -1084,11 +1088,6 @@ body {
   width: 29rem; 
   margin: 0 auto;
 }
-
-.landing-page h6 {
-  font-size: 2rem;
-}
-
 
 .about .container {
   flex-direction: column;
@@ -1162,16 +1161,13 @@ body {
   color: #16162d;
 }
 .contact ul li{ font-size: 2rem;}
-.min-icon img{ width: 35%;}
-}
-
 
 /* 모바일세로, 태블릿 세로---------------------------------------------- */
 @media screen and (max-width:479px)  {
 body {
   width: 100%;
   height: 100vh;
-  background:url(../img/amalfi.jpg) no-repeat center fixed;
+  background:url(../img/bg1.JPG) no-repeat center fixed;
   background-size: cover;
   overflow-x:hidden;
 }
@@ -1198,7 +1194,6 @@ body {
   height: 3.5rem;
   text-align: center;
   border-radius: 1.2rem;
-  background-color: #0073b1;
   font-weight: 500;
   margin-right:0rem;
   margin-top:0.3rem;
@@ -1232,10 +1227,6 @@ body {
   .landing-page div{
     width: 29rem; 
     margin: 0 auto;
-  }
-  
-  .landing-page h6 {
-    font-size: 2rem;
   }
   
   
@@ -1302,13 +1293,3 @@ body {
       overflow: hidden;
   }
   
-  
-  .contact p{ 
-    font-size: 3rem; font-weight: 700;
-    font-family: 'MuseoModerno', cursive;
-    color: #16162d;
-  }
-  .contact ul li{ font-size: 1.7rem;}
-  .min-icon img{ width: 35%;}
- 
-}
